@@ -73,7 +73,7 @@ function App() {
         Roulette & OrderNumber
       </div>
       <p style={{ textAlign: "right", color: "#CCCCCC", marginRight: 20 }}>
-        Ver 0.1 Developed By Lee Freez
+        Ver 0.2 Developed By Lee Freez
       </p>
       <div style={{ display: "flex" }}>
         <div style={{ width: "50%", marginLeft: 50 }}>
