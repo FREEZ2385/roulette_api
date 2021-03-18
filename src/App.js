@@ -127,7 +127,7 @@ function App() {
             <Button
               variant="contained"
               color="primary"
-              style={{ marginTop: 10, width: 120 }}
+              style={{ marginTop: 10, width: 130 }}
               onClick={() => {
                 shuffleRouletteData();
               }}
