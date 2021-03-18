@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/roulette_api/static/css/main.dd672109.chunk.css",
+    "main.js": "/roulette_api/static/js/main.a529d2ca.chunk.js",
+    "main.js.map": "/roulette_api/static/js/main.a529d2ca.chunk.js.map",
+    "runtime-main.js": "/roulette_api/static/js/runtime-main.b22298b4.js",
+    "runtime-main.js.map": "/roulette_api/static/js/runtime-main.b22298b4.js.map",
+    "static/js/2.fabb24ff.chunk.js": "/roulette_api/static/js/2.fabb24ff.chunk.js",
+    "static/js/2.fabb24ff.chunk.js.map": "/roulette_api/static/js/2.fabb24ff.chunk.js.map",
+    "static/js/3.b612a330.chunk.js": "/roulette_api/static/js/3.b612a330.chunk.js",
+    "static/js/3.b612a330.chunk.js.map": "/roulette_api/static/js/3.b612a330.chunk.js.map",
+    "index.html": "/roulette_api/index.html",
+    "static/css/main.dd672109.chunk.css.map": "/roulette_api/static/css/main.dd672109.chunk.css.map",
+    "static/js/2.fabb24ff.chunk.js.LICENSE.txt": "/roulette_api/static/js/2.fabb24ff.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/roulette_api/static/media/bg.6e76f1ab.png",
+    "static/media/logo.6ce24c58.svg": "/roulette_api/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b22298b4.js",
+    "static/js/2.fabb24ff.chunk.js",
+    "static/css/main.dd672109.chunk.css",
+    "static/js/main.a529d2ca.chunk.js"
+  ]
+}
