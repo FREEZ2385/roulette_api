@@ -73,7 +73,7 @@ function App() {
         Roulette & OrderNumber
       </div>
       <p style={{ textAlign: "right", color: "#CCCCCC", marginRight: 20 }}>
-        Ver 0.1 Developed By Lee Freez
+        Ver 0.2 Developed By Lee Freez
       </p>
       <div style={{ display: "flex" }}>
         <div style={{ width: "50%", marginLeft: 50 }}>
@@ -127,7 +127,7 @@ function App() {
             <Button
               variant="contained"
               color="primary"
-              style={{ marginTop: 10, width: 120 }}
+              style={{ marginTop: 10, width: 130 }}
               onClick={() => {
                 shuffleRouletteData();
               }}
