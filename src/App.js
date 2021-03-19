@@ -81,9 +81,7 @@ function App() {
             <Wheel
               mustStartSpinning={rouletteClick}
               onStopSpinning={() => setRouletteClick(false)}
-              prizeNumber={Math.floor(
-                Math.random() * (rouletteData.length - 1)
-              )}
+              prizeNumber={Math.floor(Math.random() * rouletteData.length)}
               data={rouletteData}
               backgroundColors={["#386fa4", "#84d2f6"]}
               innerRadius={20}
