@@ -9,10 +9,7 @@
   }
 }
 
-.roulette > div {
-  max-width: calc(40vw - 10px);
-  max-height: calc(40vw - 10px);
-}
+
 
 .App-header {
   background-color: #282c34;

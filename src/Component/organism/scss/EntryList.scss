@@ -1,0 +1,11 @@
+.entry-list {
+  margin-top: 40px;
+
+  .title-text {
+    font-size: 20px;
+  }
+  .button-list {
+    max-height: 36vh;
+    overflow: auto;
+  }
+}
