@@ -4,11 +4,29 @@ import CloseIcon from "@material-ui/icons/Close";
 import "./scss/EntryList.scss";
 
 export const EntryList = ({ ...props }) => {
-  const { rouletteData, deleteRouletteData } = props;
+  const { rouletteData, deleteRouletteData, shuffleRouletteData } = props;
 
   return (
     <div className="entry-list">
-      <p className="title-text">エントリー一覧</p>
+      <div style={{ display: "flex" }}>
+        <p className="title-text">エントリー一覧</p>
+        <Button
+          variant="contained"
+          color="primary"
+          style={{
+            marginLeft: 15,
+            width: 150,
+            height: 32,
+            marginTop: "auto",
+            marginBottom: "auto",
+          }}
+          onClick={() => {
+            shuffleRouletteData();
+          }}
+        >
+          順番を変わる
+        </Button>
+      </div>
       <div className="button-list">
         {rouletteData.map((data, index) => {
           if (data.option !== "")

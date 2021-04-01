@@ -9,7 +9,6 @@ export const InputText = ({ ...props }) => {
     entryName,
     addEntryName,
     addRouletteData,
-    shuffleRouletteData,
   } = props;
 
   return (
@@ -43,16 +42,7 @@ export const InputText = ({ ...props }) => {
         >
           追加
         </Button>
-        <Button
-          variant="contained"
-          color="primary"
-          style={{ marginTop: 10, width: 130 }}
-          onClick={() => {
-            shuffleRouletteData();
-          }}
-        >
-          順番を変わる
-        </Button>
+        
       </div>
     </div>
   );
