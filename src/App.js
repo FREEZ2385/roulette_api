@@ -7,6 +7,7 @@ import { useCookies } from "react-cookie";
 import { Roulette } from "./Component/organism/Roulette";
 import { EntryList } from "./Component/organism/EntryList";
 import { InputText } from "./Component/organism/InputText";
+import packageJson from "../package.json";
 
 function shuffle(a) {
   for (let i = a.length - 1; i > 0; i--) {
@@ -30,12 +31,12 @@ function App() {
     if (rouletteData.length === 1 && rouletteData[0].option === "") {
       setRouletteData([{ option: name }]);
       setCookie("rouletteData", [{ option: name }], {
-        maxAge: 2000,
+        expires: new Date(Date.now() + 2592000),
       });
     } else {
       setRouletteData(rouletteData.concat({ option: name }));
       setCookie("rouletteData", rouletteData.concat({ option: name }), {
-        maxAge: 2000,
+        expires: new Date(Date.now() + 2592000),
       });
     }
     addEntryName("");
@@ -45,14 +46,14 @@ function App() {
     if (rouletteData.length == 1) {
       setRouletteData([{ option: "" }]);
       setCookie("rouletteData", [{ option: "" }], {
-        maxAge: 2000,
+        mexpires: new Date(Date.now() + 2592000),
       });
     } else {
       const dataList = [...rouletteData];
       dataList.splice(index, 1);
       setRouletteData(dataList);
       setCookie("rouletteData", dataList, {
-        maxAge: 2000,
+        expires: new Date(Date.now() + 2592000),
       });
     }
   };
@@ -63,7 +64,7 @@ function App() {
       const shuffledList = shuffle(dataList);
       setRouletteData(shuffledList);
       setCookie("rouletteData", shuffledList, {
-        maxAge: 2000,
+        expires: new Date(Date.now() + 2592000),
       });
     }
   };
@@ -75,7 +76,7 @@ function App() {
         Roulette & OrderNumber
       </div>
       <p style={{ textAlign: "right", color: "#CCCCCC", marginRight: 20 }}>
-        Ver 0.3 Developed By Lee Freez
+        Ver {packageJson.version} Developed By Lee Freez
       </p>
       <div style={{ display: "flex" }}>
         <div style={{ width: "50%", marginLeft: 50 }}>
@@ -91,12 +92,12 @@ function App() {
             entryName={entryName}
             addEntryName={addEntryName}
             addRouletteData={(text) => addRouletteData(text)}
-            shuffleRouletteData={shuffleRouletteData}
           />
           <hr style={{ borderTop: "1px solid #cccccc" }} />
           <EntryList
             deleteRouletteData={(index) => deleteRouletteData(index)}
             rouletteData={rouletteData}
+            shuffleRouletteData={shuffleRouletteData}
           />
         </div>
       </div>
