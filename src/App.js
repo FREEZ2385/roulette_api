@@ -7,6 +7,7 @@ import { useCookies } from "react-cookie";
 import { Roulette } from "./Component/organism/Roulette";
 import { EntryList } from "./Component/organism/EntryList";
 import { InputText } from "./Component/organism/InputText";
+import packageJson from "../package.json";
 
 function shuffle(a) {
   for (let i = a.length - 1; i > 0; i--) {
@@ -75,7 +76,7 @@ function App() {
         Roulette & OrderNumber
       </div>
       <p style={{ textAlign: "right", color: "#CCCCCC", marginRight: 20 }}>
-        Ver 0.3 Developed By Lee Freez
+        Ver {packageJson.version} Developed By Lee Freez
       </p>
       <div style={{ display: "flex" }}>
         <div style={{ width: "50%", marginLeft: 50 }}>
