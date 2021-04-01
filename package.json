@@ -1,6 +1,6 @@
 {
   "name": "roulette_app",
-  "version": "0.4",
+  "version": "0.4.0",
   "private": true,
   "homepage": "http://freez2385.github.io/roulette_api/",
   "dependencies": {
