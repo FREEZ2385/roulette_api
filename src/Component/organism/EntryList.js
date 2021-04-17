@@ -1,13 +1,44 @@
-import React from "react";
-import { Button } from "@material-ui/core";
+import React, { useState } from "react";
+import {
+  Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogTitle,
+} from "@material-ui/core";
 import CloseIcon from "@material-ui/icons/Close";
 import "./scss/EntryList.scss";
 
 export const EntryList = ({ ...props }) => {
   const { rouletteData, deleteRouletteData, shuffleRouletteData } = props;
+  const [open, setOpen] = useState(false);
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   return (
     <div className="entry-list">
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">
+          エントリー順番変更完了
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            エントリーの順番を変わりました。エントリーリストを改めてご確認してください。
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose} color="primary" autoFocus>
+            閉じる
+          </Button>
+        </DialogActions>
+      </Dialog>
       <div style={{ display: "flex" }}>
         <p className="title-text">エントリー一覧</p>
         <Button
@@ -22,6 +53,7 @@ export const EntryList = ({ ...props }) => {
           }}
           onClick={() => {
             shuffleRouletteData();
+            setOpen(true);
           }}
         >
           順番を変わる
